@@ -529,14 +529,14 @@ function ActivityItem({ text, time, active, color }: any) {
 
 function NotificationItem({ icon, title, desc, time }: any) {
   return (
-    <div className="flex gap-5 p-4 rounded-2xl hover:bg-white/5 transition-all cursor-pointer">
-      <div className="p-3 bg-white/5 rounded-xl h-fit">{icon}</div>
+    <div className="flex gap-5 p-5 rounded-[2rem] hover:bg-white/5 transition-all cursor-pointer border border-transparent hover:border-white/10">
+      <div className="p-4 bg-white/5 rounded-2xl h-fit border border-white/5">{icon}</div>
       <div className="flex-1">
-        <div className="flex justify-between items-center mb-1">
-          <h5 className="text-[11px] font-black text-white uppercase">{title}</h5>
-          <span className="text-[9px] text-slate-600 font-bold">{time}</span>
+        <div className="flex justify-between items-center mb-1.5">
+          <h5 className="text-[12px] font-black text-white uppercase tracking-tight">{title}</h5>
+          <span className="text-[10px] font-bold text-slate-600">{time}</span>
         </div>
-        <p className="text-[10px] text-slate-500 leading-tight">{desc}</p>
+        <p className="text-[11px] text-slate-500 leading-relaxed font-medium">{desc}</p>
       </div>
     </div>
   );
