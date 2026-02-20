@@ -3,10 +3,11 @@ import { Lightbulb, ArrowRight, AlertTriangle, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface AcademicAlertCardProps {
+  viewMode: 'faculty' | 'hod' | 'student';
+  category: 'warning' | 'trend';
   title: string;
   description: string;
-  category?: "tip" | "warning" | "trend" | "info";
-  viewMode?: string;
+  onViewDetails?: () => void; // Add this line with the '?'
 }
 
 export function AcademicAlertCard({ title, description, category = "tip", viewMode }: AcademicAlertCardProps) {
